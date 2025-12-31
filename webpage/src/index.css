@@ -8,3 +8,30 @@
   font-family: font2;
   src: url(../public/fonts/Lausanne-500.woff2)
 }
+
+.navAnimation{
+  opacity: 0;
+  transition: all ease 0.2s;
+}
+
+.link:hover .navAnimation{
+opacity: 100;
+}
+
+.xscroll{
+animation-name: movAnimation;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+
+
+
+@keyframes movAnimation{
+from{
+  transform: translateX(0);
+}
+to{
+  transform: translateX(-100%);
+}
+}

@@ -22,7 +22,12 @@ const Agence = () => {
         start: "top 25%",
         end: "top -170%",
         pin: true,
-        pinType: 'transform', // smooth scrubbing with 1s easing
+         pinSpacing: true,
+        pinReparent: true,
+        pinType: 'transform',
+        scrub: 1, // smooth scrubbing with 1s easing
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
         onUpdate: (elem) => {
 
           let imageIndex;
@@ -36,22 +41,22 @@ const Agence = () => {
         },
       },
     });
-    
 
   });
 
   return (
-    <div className="overflow-y-hidden pt-2">
-      <div className="relative">
+    <div className="overflow-y-hidden ">
+      <div className="relative pt-2">
 
           <div
         ref={imgDiv}
-        className=" absolute h-[20vw] w-[15vw] top-[13vw] left-[30vw] rounded-2xl  overflow-hidden "
+        className=" absolute  h-[20vw] w-[15vw] top-[13vw] left-[30vw] rounded-2xl  overflow-hidden "
       >
         <img
           ref={imgRef}
           className=" h-full w-full object-cover "
           src={imgArray[0]}
+          alt=""
         ></img>
       </div>
       </div>
