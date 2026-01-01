@@ -5,11 +5,11 @@ import HomeBottomText from "../components/home/HomeBottomText";
 import Navbar from "../components/home/Navbar";
 
 const Home = () => {
-  console.log("home");
-  console.log("nigga");
+
   return (
     <div className="z-20">
       <Navbar/>
+      
       <div className="h-full w-full object-cover fixed">
         <Video />{" "}
       </div>

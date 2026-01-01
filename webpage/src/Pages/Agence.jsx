@@ -11,10 +11,12 @@ import { useGSAP } from "@gsap/react";
     import img8 from "/src/assets/img8.jpg"
 import { ScrollTrigger } from "gsap/all";
 const Agence = () => {
-  const imgArray = [img1, img2, img3, img4, img5, img6,img7, img8];
+    gsap.registerPlugin(ScrollTrigger);
   const imgDiv = useRef(null);
   const imgRef = useRef(null);
-  gsap.registerPlugin(ScrollTrigger);
+  const imgArray = [img1, img2, img3, img4, img5, img6,img7, img8];
+
+
   useGSAP(() => {
     gsap.to(imgDiv.current, {
       scrollTrigger: {
@@ -41,12 +43,14 @@ const Agence = () => {
         },
       },
     });
+    ScrollTrigger.refresh();
 
-  });
+
+  },[]);
 
   return (
     <div className="overflow-y-hidden ">
-      <div className="relative pt-2">
+      <div className="relative py-1">
 
           <div
         ref={imgDiv}
@@ -61,7 +65,7 @@ const Agence = () => {
       </div>
       </div>
     
-      <div className="section1">
+      <div className="relative section1">
         <div className=" relative mt-[29vw] text-[19.8vw] font-[font2] uppercase leading-[17.5vw] text-center">
           Soixan7e<br></br>
           Douze

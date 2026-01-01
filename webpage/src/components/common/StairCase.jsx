@@ -16,15 +16,13 @@ const StairCase = ({children}) => {
     tl.from(".animationBox", {
       height: 0,
       stagger: {
-        each: 0.05,
-        from: "end",
+        amount:-0.2,
       },
     });
     tl.to(".animationBox", {
       y: "100%",
       stagger: {
-        each: 0.05,
-        from: "end",
+        amount:-0.25,
       },
     });
     tl.to(screenAnimation.current, {
@@ -37,7 +35,7 @@ const StairCase = ({children}) => {
     gsap.from(mainPage.current,{
         opacity:0,
         delay:1.3,
-        scale:2
+        scale:1.2
     })
   }, [locate]);
   return (

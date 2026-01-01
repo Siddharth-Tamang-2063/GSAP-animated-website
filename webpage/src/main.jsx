@@ -5,11 +5,16 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import StairCase from './components/common/StairCase.jsx'
+import NavPage from './Pages/NavPage.jsx'
+import Context from './context/Context.jsx'
 
 createRoot(document.getElementById('root')).render(
 <BrowserRouter>
 <StairCase>
- <App />
+    <Context>
+          <App />
+    </Context>
+       
 </StairCase>
 
 </BrowserRouter>
