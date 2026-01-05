@@ -12,68 +12,79 @@ const NavPage = () => {
  const navScreen = useRef(null)
 
 
-  function gsapAnimation() {
-    const tl = gsap.timeline();
-    tl.to(navScreen.current,{
-      display:"block"
-    })
+function gsapAnimation() {
+  const tl = gsap.timeline();
 
-    tl.to(".stair", {
-      delay:0.2,
-      height: "100%",
-      stagger: {
-        amount:-0.3
-      },
-    });
+  // Show nav screen instantly
+  tl.to(navScreen.current, {
+    display: "block",
+    duration: 0
+  });
 
-     tl.to(".link",{
-    opacity:1,
-    rotateX:0,
-     stagger: {
-        amount:0.3
-      },
-   })
+  // Stair animation slightly slower
+  tl.to(".stair", {
+    height: "100%",
+    duration: 0.5,        // slightly slower
+    stagger: 0.08
+  });
 
-    tl.to(fullNavRef.current,{
-      opacity:1
-    })
+  // Links animation slightly slower
+  tl.to(".link", {
+    opacity: 1,
+    rotateX: 0,
+    duration: 0.35,
+    stagger: 0.08
+  });
+
+  // Full nav fade in
+  tl.to(fullNavRef.current, {
+    opacity: 1,
+    duration: 0.3
+  });
+
+  // Navlink fade in
+
+
+  // Cross icon fade in (fast)
+  tl.to(".close-cross", {
+    opacity: 1,
+    duration: 0.3
+  });
+}
+
+function gsapreverseAnimation() {
+  const tl = gsap.timeline();
+
+  // Cross icon fade out fast
+  tl.to(".close-cross", {
+    opacity: 0,
+    duration: 0.3
+  });
+
+  // Links hide slightly slower
+  tl.to(".link", {
+    opacity: 0,
+    rotateX: 90,
+    duration: 0.35,
+    stagger: 0.08
+  });
+
+  // Stair shrink slightly slower
+  tl.to(".stair", {
+    height: 0,
+    duration: 0.5,
+    stagger: 0.05
+  });
+
+  // Navlink fade out
   
- tl.to('.navlink', {
-            opacity: 1
-        })
-  
-  }
 
-    function gsapreverseAnimation() {
-    const tl = gsap.timeline();
-
-     tl.to(".link",{
-    opacity:0,
-    rotateX:90,
-     stagger: {
-        amount:0.3
-      },
-   })
-
-    tl.to(".stair", {
-      height: 0,
-      stagger: {
-        amount:0.1
-      },
-    });
- tl.to('.navlink', {
-            opacity: 0
-        })
-    tl.to(fullNavRef.current,{
-      opacity:0
-    })
-  tl.to(navScreen.current,{
-    display:"none"
-  })
-
-  
-  }
-
+  // Hide nav screen instantly
+  tl.to(navScreen.current, {
+    display: "none",
+    duration: 0
+  });
+}
 
   useGSAP(()=>{
     if(navOpen){
@@ -90,18 +101,18 @@ const NavPage = () => {
  {/* animationCode */}
       <div  className="h-screen w-full fixed"> 
     <div className="h-full w-full flex  ">
-          <div className="h-full stair w-1/5 bg-red-500"></div>
-          <div className="h-full stair w-1/5 bg-red-500"></div>
-          <div className="h-full stair w-1/5 bg-red-500"></div>
-          <div className="h-full stair w-1/5 bg-red-500"></div>
-          <div className="h-full stair w-1/5 bg-red-500"></div>
+          <div className="h-full stair w-1/5 bg-black"></div>
+          <div className="h-full stair w-1/5 bg-black"></div>
+          <div className="h-full stair w-1/5 bg-black"></div>
+          <div className="h-full stair w-1/5 bg-black"></div>
+          <div className="h-full stair w-1/5 bg-black"></div>
         </div>
       </div>
 
 {/* navpagecode */}
       <div>
       <div className=" relative navlink top-0 w-full text-white  flex justify-between ">
-        <div className="p-2">
+        <div className="p-2 close-cross">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="110"
@@ -115,13 +126,13 @@ const NavPage = () => {
             ></path>
           </svg>
         </div>
-        <div onClick={()=>{setnavOpen(false)}} className="relative h-30 w-30 flex items-center justify-center ">
+        <div onClick={()=>{setnavOpen(false)}} className="close-cross relative h-30 w-30 flex items-center justify-center ">
   <div className="absolute h-full w-0.5 bg-white  rotate-45 origin-center"></div>
   <div className="absolute h-full w-0.5 bg-white -rotate-45 origin-center"></div>
 </div>
 
       </div>
-      <div ref={fullNavRef} className="      ">
+      <div ref={fullNavRef} className=" ">
         <div className=" py-5">
         <div className="link origin-top relative leading-[7vw]  ">
           <h1 className="text-[8vw] uppercase font-[font2] border-t-1 pt-2 text-center">
