@@ -40,7 +40,7 @@ const StairCase = ({children}) => {
   }, [locate]);
   return (
     <div className="overflow-x-hidden">
-      <div ref={screenAnimation} className="h-screen w-full   fixed z-10">
+      <div ref={screenAnimation} className="h-screen w-full  fixed z-10">
         <div className="h-full w-full flex  fixed z-10">
           <div className="h-full animationBox w-1/5 bg-black"></div>
           <div className="h-full animationBox w-1/5 bg-black"></div>

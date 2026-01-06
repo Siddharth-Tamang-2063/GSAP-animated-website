@@ -54,7 +54,7 @@ const Agence = () => {
 
           <div
         ref={imgDiv}
-        className=" absolute  h-[20vw] w-[15vw] top-[13vw] left-[30vw] rounded-2xl  overflow-hidden "
+        className=" absolute h-[25vw] w-[20vw]  lg:h-[20vw] lg:w-[15vw] lg:top-[13vw] lg:left-[30vw] rounded-2xl  overflow-hidden "
       >
         <img
           ref={imgRef}
@@ -70,7 +70,7 @@ const Agence = () => {
           Soixan7e<br></br>
           Douze
         </div>
-        <div className="text-[4vw] font-[font2]  pl-[50%] leading-[4vw] ">
+        <div className="lg:text-[4vw] text-[6vw] font-[font2] pl-3  lg:pl-[50%] lg:leading-[4vw] leading-[6vw] ">
           <p>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Notre
             curiosité nourrit notre créativité. On reste humbles et on dit non
@@ -82,7 +82,7 @@ const Agence = () => {
           </p>
         </div>
       </div>
-      <div className="section2 h-screen w-screen"></div>
+     
     </div>
   );
 };

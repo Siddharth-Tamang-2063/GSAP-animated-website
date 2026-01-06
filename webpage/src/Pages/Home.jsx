@@ -8,7 +8,6 @@ const Home = () => {
 
   return (
     <div className="z-20">
-      <Navbar/>
       
       <div className="h-full w-full object-cover fixed">
         <Video />{" "}

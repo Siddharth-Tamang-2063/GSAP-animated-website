@@ -126,7 +126,7 @@ function gsapreverseAnimation() {
             ></path>
           </svg>
         </div>
-        <div onClick={()=>{setnavOpen(false)}} className="close-cross relative h-30 w-30 flex items-center justify-center ">
+        <div onClick={()=>{setnavOpen(false)}} className="close-cross relative lg:h-30  lg:w-30 h-[14vw] w-[14vw] flex items-center justify-center ">
   <div className="absolute h-full w-0.5 bg-white  rotate-45 origin-center"></div>
   <div className="absolute h-full w-0.5 bg-white -rotate-45 origin-center"></div>
 </div>
@@ -135,24 +135,24 @@ function gsapreverseAnimation() {
       <div ref={fullNavRef} className=" ">
         <div className=" py-5">
         <div className="link origin-top relative leading-[7vw]  ">
-          <h1 className="text-[8vw] uppercase font-[font2] border-t-1 pt-2 text-center">
+          <h1 className="lg:text-[8vw] lg:pt-2 text-[10vw] py-4 uppercase font-[font2] border-t-1  text-center">
             projects
           </h1>
 
-          <div className="navAnimation absolute flex   top-0 bg-[#D3FD50] text-black items-center">
+          <div className=" hidden lg:flex navAnimation absolute    top-0 bg-[#D3FD50] text-black items-center">
             <div className="xscroll  flex overflow-x-auto-auto   items-center">
               <h2 className="text-[8vw] whitespace-nowrap  uppercase font-[font2] border-t-0.5 pt-2 text-center">
                 pour toit voir
               </h2>
               <img
-                className="h-18 w-52 object-cover flex-shrink-0   rounded-full "
+                className="lg:h-18 lg:w-52 h-[10vw] w-[10vw] object-cover flex-shrink-0   rounded-full "
                 src="/src/assets/Thumbnail1.png"
               ></img>
               <h2 className="text-[8vw] whitespace-nowrap uppercase font-[font2] border-t-1 pt-2 text-center">
                 pour toit voir
               </h2>
               <img
-                className="h-18 w-52 object-cover flex-shrink-0   rounded-full "
+                className="lg:h-18 lg:w-52 h-[15vw] w-[15vw] object-cover flex-shrink-0   rounded-full "
                 src="/src/assets/Thumbnail2.png"
               ></img>
             </div>
@@ -161,25 +161,25 @@ function gsapreverseAnimation() {
                 pour toit voir
               </h2>
               <img
-                className="h-18 w-52 object-cover shrink-0   rounded-full "
+                className="lg:h-18 lg:w-52 h-[15vw] w-[15vw] object-cover shrink-0   rounded-full "
                 src="/src/assets/Thumbnail1.png"
               ></img>
               <h2 className="text-[8vw] whitespace-nowrap uppercase font-[font2] border-t-1 pt-2 text-center">
                 pour toit voir
               </h2>
               <img
-                className="h-18 w-52 object-cover shrink-0   rounded-full "
+                className="lg:h-18 lg:w-52 h-[15vw] w-[15vw] object-cover shrink-0   rounded-full "
                 src="/src/assets/Thumbnail2.png"
               ></img>
             </div>
           </div>
         </div> 
         <div className="link origin-top  relative leading-[7vw]  ">
-          <h1 className="text-[8vw] uppercase font-[font2] border-t-1 pt-2 text-center">
+          <h1 className="lg:text-[8vw] lg:pt-2 text-[10vw] py-4 uppercase font-[font2] border-t-1 pt-2 text-center">
             agence
           </h1>
 
-          <div className="navAnimation absolute flex   top-0 bg-[#D3FD50] text-black items-center">
+          <div className="navAnimation hidden lg:flex absolute   top-0 bg-[#D3FD50] text-black items-center">
             <div className="xscroll  flex overflow-x-auto-auto   items-center">
               <h2 className="text-[8vw] whitespace-nowrap  uppercase font-[font2] border-t-1 pt-2 text-center">
                 pour toit voir
@@ -215,11 +215,11 @@ function gsapreverseAnimation() {
           </div>
         </div> 
         <div className="link origin-top  relative leading-[7vw]  ">
-          <h1 className="text-[8vw] uppercase font-[font2] border-t-1 pt-2 text-center">
+          <h1 className="lg:text-[8vw] lg:pt-2 text-[10vw] py-4 uppercase font-[font2] border-t-1 pt-2 text-center">
             contact
           </h1>
 
-          <div className="navAnimation absolute flex   top-0 bg-[#D3FD50] text-black items-center">
+          <div className="navAnimation absolute hidden lg:flex   top-0 bg-[#D3FD50] text-black items-center">
             <div className="xscroll  flex overflow-x-auto-auto   items-center">
               <h2 className="text-[8vw] whitespace-nowrap  uppercase font-[font2] border-t-1 pt-2 text-center">
                 pour toit voir
@@ -255,11 +255,11 @@ function gsapreverseAnimation() {
           </div>
         </div> 
         <div className="link origin-top  relative leading-[7vw]  ">
-          <h1 className="text-[8vw] uppercase font-[font2] border-t-1 border-b-1 pt-2 text-center">
+          <h1 className="lg:text-[8vw] lg:pt-2 text-[10vw] py-4 uppercase font-[font2] border-t-1 border-b-1 pt-2 text-center">
             blogue
           </h1>
 
-          <div className="navAnimation absolute flex   top-0 bg-[#D3FD50] text-black items-center">
+          <div className="navAnimation absolute hidden lg:flex   top-0 bg-[#D3FD50] text-black items-center">
             <div className="xscroll  flex overflow-x-auto-auto   items-center">
               <h2 className="text-[8vw] whitespace-nowrap  uppercase font-[font2]  pt-2 text-center">
                 pour toit voir

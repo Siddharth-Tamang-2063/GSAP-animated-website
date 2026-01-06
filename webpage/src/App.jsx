@@ -4,12 +4,14 @@ import Home from './Pages/Home'
 import Projects from './Pages/Projects'
 import Agence from './Pages/Agence'
 import NavPage from './Pages/NavPage'
+import Navbar from './components/home/Navbar'
 
 const App = () => {
   
   
   return (
-    <div>
+    <div className='overflow-x-hidden'>
+      <Navbar/>
       <NavPage/>
     <Routes>
       <Route path="/" element={<Home/>}></Route>
